@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>p5.js 程式設計簡易測驗</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-chinese: "LXGW WenKai Mono TC", "Noto Sans Mono CJK TC", monospace;
+      --font-latin: "Bitcount Ink", Arial, sans-serif;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #f8f9fa;
+      touch-action: none;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-chinese), var(--font-latin);
+    }
+
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      touch-action: none;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
+  <script src="./sketch.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <!-- 設定文件編碼，確保繁體中文正常顯示。 -->
+  <meta charset="UTF-8">
+  <!-- 讓手機、平板依實際視窗寬度呈現響應式全螢幕畫布。 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>p5.js 程式設計簡易測驗</title>
+
+  <!-- 依需求保留 Google Fonts 的三行設定。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+
+  <style>
+    /* 定義頁面與程式使用的中英文字型 fallback 順序。 */
+    :root {
+      --font-chinese: "LXGW WenKai Mono TC", "Noto Sans Mono CJK TC", monospace;
+      --font-latin: "Bitcount Ink", Arial, sans-serif;
+    }
+
+    /* 讓 html 與 body 佔滿視窗，並禁止捲動與瀏覽器觸控手勢。 */
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #f8f9fa;
+      touch-action: none;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* 設定頁面文字 fallback，Canvas 文字由 sketch.js 依字元切換字型。 */
+    body {
+      font-family: var(--font-chinese), var(--font-latin);
+    }
+
+    /* 讓 p5.js canvas 無空白間距並填滿整個瀏覽器視窗。 */
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      touch-action: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- 老師更新並發布 Google 試算表後，重新載入本頁即可同步最新題庫。 -->
+  <!-- 載入 p5.js 函式庫，提供 createCanvas、loadTable 與繪圖功能。 -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
+  <!-- 載入使用 Google Sheets CSV 題庫的測驗程式。 -->
+  <script src="./sketch.js"></script>
+</body>
+</html>
